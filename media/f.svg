@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="jhGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="65%" stop-color="#006633"/>
+      <stop offset="100%" stop-color="#004D27"/>
+    </radialGradient>
+    <path id="topArc" d="M 60 200 A 140 140 0 0 1 340 200" fill="none"/>
+    <path id="bottomArc" d="M 340 200 A 140 140 0 0 1 60 200" fill="none"/>
+    <filter id="govGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ring with dark forest green -->
+  <circle cx="200" cy="200" r="194" fill="url(#jhGrad)" stroke="#004D27" stroke-width="4" filter="url(#govGlow)"/>
+  <circle cx="200" cy="200" r="186" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+
+  <!-- Outer decorative dots ring -->
+  <circle cx="200" cy="200" r="176" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="3.5 5.5"/>
+
+  <!-- Inner border ring -->
+  <circle cx="200" cy="200" r="166" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="200" cy="200" r="161" fill="#004D27"/>
+
+  <!-- Circular Text -->
+  <text font-family="'Noto Sans Devanagari', 'Segoe UI', sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" letter-spacing="3.5">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">झारखण्ड सरकार</textPath>
+  </text>
+  <text font-family="'Segoe UI', 'Inter', 'Poppins', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" letter-spacing="3">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">GOVERNMENT OF JHARKHAND</textPath>
+  </text>
+
+  <!-- Elephants Ring (State Animal - 24 white icons) -->
+  <circle cx="200" cy="200" r="126" fill="#FFFFFF" stroke="#006633" stroke-width="2"/>
+  <circle cx="200" cy="200" r="126" fill="none" stroke="#004D27" stroke-width="12" stroke-dasharray="6 10"/>
+
+  <!-- Palash Flowers Ring (State Flower - Flame of the Forest) -->
+  <circle cx="200" cy="200" r="112" fill="#004D27" stroke="#F59E0B" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="102" fill="none" stroke="#EF4444" stroke-width="8" stroke-dasharray="4 8"/>
+
+  <!-- Traditional Sauria Paharia Dancers Ring -->
+  <circle cx="200" cy="200" r="92" fill="#FFFFFF" stroke="#004D27" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="82" fill="none" stroke="#006633" stroke-width="8" stroke-dasharray="5 7"/>
+
+  <!-- Center Circle: Ashoka Lion Capital (National Emblem) -->
+  <circle cx="200" cy="200" r="70" fill="#004D27" stroke="#F59E0B" stroke-width="2.5"/>
+  <circle cx="200" cy="200" r="66" fill="#FFFFFF"/>
+
+  <!-- Ashoka Lion Capital Vector Drawing -->
+  <g transform="translate(200, 194) scale(0.68)">
+    <!-- Base Abacus -->
+    <rect x="-48" y="32" width="96" height="15" rx="3" fill="#004D27"/>
+    <rect x="-56" y="47" width="112" height="7" rx="2" fill="#D97706"/>
+    <!-- Central Ashoka Chakra -->
+    <circle cx="0" cy="39" r="7.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+    <circle cx="0" cy="39" r="1.5" fill="#FFFFFF"/>
+    <!-- Side animals (Bull & Horse) -->
+    <ellipse cx="-28" cy="39" rx="6" ry="3.5" fill="#FFFFFF"/>
+    <ellipse cx="28" cy="39" rx="6" ry="3.5" fill="#FFFFFF"/>
+    
+    <!-- Central Lion -->
+    <path d="M-18 32 C-22 10 -15 -20 0 -38 C15 -20 22 10 18 32 Z" fill="#004D27"/>
+    <circle cx="0" cy="-28" r="13" fill="#004D27"/>
+    <ellipse cx="0" cy="-10" rx="11" ry="18" fill="#006633"/>
+    <ellipse cx="0" cy="14" rx="14" ry="16" fill="#004D27"/>
+
+    <!-- Left Lion Profile -->
+    <path d="M-16 32 C-36 26 -44 4 -34 -12 C-26 -20 -16 -12 -14 8 Z" fill="#004D27"/>
+    <circle cx="-30" cy="-10" r="10" fill="#004D27"/>
+
+    <!-- Right Lion Profile -->
+    <path d="M16 32 C36 26 44 4 34 -12 C26 -20 16 -12 14 8 Z" fill="#004D27"/>
+    <circle cx="30" cy="-10" r="10" fill="#004D27"/>
+
+    <!-- Crest Crown -->
+    <path d="M-10 -38 L0 -48 L10 -38 L0 -34 Z" fill="#D97706"/>
+    
+    <!-- Motto Banner: Satyameva Jayate -->
+    <rect x="-38" y="58" width="76" height="12" rx="3" fill="#004D27"/>
+    <text x="0" y="66" font-family="'Noto Sans Devanagari', 'Segoe UI', sans-serif" font-size="8.5" font-weight="bold" fill="#FDE047" text-anchor="middle">सत्यमेव जयते</text>
+  </g>
+</svg>

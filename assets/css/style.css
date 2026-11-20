@@ -140,172 +140,94 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ==========================================================================
-   HEADER 1: GOVT TOP UTILITY BAR
-   ========================================================================== */
-.top-utility-bar {
-  background-color: #00361a;
-  color: #d1edd8;
-  font-size: 0.82rem;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.top-utility-bar .site-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.utility-left, .utility-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.utility-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: #e2f4e6;
-}
-
-.utility-item i {
-  color: var(--light-green);
-}
-
-.utility-item a {
-  color: inherit;
-}
-.utility-item a:hover {
-  color: var(--white);
-  text-decoration: underline;
-}
-
-/* ==========================================================================
-   HEADER 2: TOP BRANDING HEADER (White Header with 3 Areas)
+   SCHOOL IDENTITY HEADER (Emblems + School Name)
    ========================================================================== */
 .site-branding-header {
   background: var(--white);
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border-light);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  padding: 24px 0;
 }
 
 .branding-layout {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
-/* Left Area: CM School of Excellence */
-.brand-left {
+.brand-emblem {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
-  text-decoration: none;
+  gap: 8px;
+  text-align: center;
+  min-width: 96px;
 }
 
-.brand-logo-img {
-  width: 68px;
-  height: 68px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+.emblem-ring {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 3px solid #d97706;
+  padding: 7px;
+  background: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12), inset 0 0 0 2px var(--white);
   transition: transform 0.3s ease;
 }
 
-.brand-left:hover .brand-logo-img {
-  transform: scale(1.04);
+.brand-emblem:hover .emblem-ring {
+  transform: scale(1.05);
 }
 
-.brand-left-text {
+.emblem-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.emblem-caption {
   display: flex;
   flex-direction: column;
+  line-height: 1.25;
 }
 
-.brand-title {
-  font-size: 1.05rem;
-  font-weight: 800;
+.emblem-caption strong {
+  font-size: 0.78rem;
+  font-weight: 700;
   color: var(--dark-forest-green);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  line-height: 1.2;
 }
 
-.brand-subtitle {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary-green);
-  letter-spacing: 0.2px;
+.emblem-caption small {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--muted-text);
 }
 
-/* Center Area: CM SoE ADIBASI H.S. BORAM */
 .brand-center {
   text-align: center;
-  padding: 0 12px;
+  min-width: 0;
 }
 
-.main-school-name {
-  font-size: clamp(1.2rem, 2.1vw, 1.85rem);
+.brand-school-name {
+  font-size: clamp(1.35rem, 2.8vw, 2.1rem);
   font-weight: 800;
   color: var(--dark-forest-green);
-  letter-spacing: 0.5px;
-  line-height: 1.25;
-  margin-bottom: 4px;
+  letter-spacing: 0.4px;
+  line-height: 1.18;
+  margin-bottom: 6px;
+  text-transform: uppercase;
 }
 
-.school-subtitle {
-  font-size: clamp(0.78rem, 1vw, 0.92rem);
+.brand-dept {
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--muted-text);
   line-height: 1.4;
-}
-
-.decorative-green-line {
-  width: 72px;
-  height: 3.5px;
-  background: linear-gradient(90deg, var(--primary-green), var(--light-green));
-  margin: 6px auto 0;
-  border-radius: 4px;
-}
-
-/* Right Area: Government of Jharkhand */
-.brand-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  justify-content: flex-end;
-}
-
-.govt-logo-img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.08));
-}
-
-.brand-right-text {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-}
-
-.govt-text-hi {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--dark-forest-green);
-  line-height: 1.2;
-}
-
-.govt-text-en {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--muted-text);
-  letter-spacing: 0.3px;
+  max-width: 560px;
+  margin: 0 auto;
 }
 
 /* ==========================================================================
@@ -1790,15 +1712,21 @@ textarea.form-control {
    ========================================================================== */
 @media (max-width: 1080px) {
   .branding-layout {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 14px;
+    gap: 12px;
   }
-  .brand-left, .brand-right {
-    justify-content: center;
+  .emblem-ring {
+    width: 72px;
+    height: 72px;
+    padding: 6px;
   }
-  .brand-right-text {
-    text-align: left;
+  .brand-emblem {
+    min-width: 80px;
+  }
+  .emblem-caption strong {
+    font-size: 0.7rem;
+  }
+  .emblem-caption small {
+    font-size: 0.64rem;
   }
   .about-notices-grid {
     grid-template-columns: 1fr;
@@ -1833,10 +1761,6 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-  .top-utility-bar .site-container {
-    justify-content: center;
-    text-align: center;
-  }
   .mobile-nav-toggle {
     display: block;
   }
@@ -1904,16 +1828,38 @@ textarea.form-control {
   }
 }
 
+@media (max-width: 600px) {
+  .site-branding-header {
+    padding: 20px 0;
+  }
+  .branding-layout {
+    gap: 8px;
+  }
+  .brand-emblem {
+    min-width: 50px;
+  }
+  .emblem-ring {
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    border-width: 2px;
+  }
+  .emblem-caption {
+    display: none;
+  }
+  .brand-school-name {
+    font-size: 1.05rem;
+    letter-spacing: 0;
+  }
+  .brand-dept {
+    font-size: 0.66rem;
+    line-height: 1.35;
+  }
+}
+
 @media (max-width: 480px) {
   .stats-grid {
     grid-template-columns: 1fr;
-  }
-  .brand-left, .brand-right {
-    flex-direction: column;
-    text-align: center;
-  }
-  .brand-right-text {
-    text-align: center;
   }
   .hero-cta-group {
     flex-direction: column;
@@ -1929,5 +1875,71 @@ textarea.form-control {
   }
   .ticker-content {
     width: 100%;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP-ONLY HEADER REFINEMENT
+   Logos sit at the outer edges with their captions alongside, balanced
+   against the centered school identity. No effect on tablet or mobile.
+   ========================================================================== */
+@media (min-width: 1081px) {
+  .site-branding-header {
+    padding: 28px 0;
+  }
+
+  .site-branding-header .site-container {
+    max-width: 100%;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .branding-layout {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .brand-emblem {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .brand-emblem-left {
+    justify-self: start;
+  }
+
+  .brand-emblem-right {
+    justify-self: end;
+    text-align: right;
+  }
+
+  .emblem-ring {
+    width: 84px;
+    height: 84px;
+    padding: 7px;
+    flex-shrink: 0;
+  }
+
+  .emblem-caption strong {
+    font-size: 0.88rem;
+    line-height: 1.3;
+  }
+
+  .emblem-caption small {
+    font-size: 0.76rem;
+    line-height: 1.3;
+  }
+
+  .brand-school-name {
+    font-size: clamp(1.9rem, 2.2vw, 2.5rem);
+    margin-bottom: 8px;
+  }
+
+  .brand-dept {
+    font-size: 0.9rem;
+    max-width: 680px;
   }
 }
