@@ -1,7 +1,6 @@
 /* ==========================================================================
    CM SoE ADIBASI H.S. BORAM — OFFICIAL STYLESHEET
-   Brand: CM School of Excellence – E-Vidya Niketan
-   Govt: Government of Jharkhand | Department of School Education & Literacy
+   Government of Jharkhand
    ========================================================================== */
 
 :root {
@@ -386,7 +385,7 @@ p:last-child { margin-bottom: 0; }
   min-height: 520px;
   display: flex;
   align-items: center;
-  background: url('../../media/hero-school.jpg') center center / cover no-repeat;
+  background: url('../../assets/images/media/hero-school.jpg') center center / cover no-repeat;
   color: var(--white);
   overflow: hidden;
 }
