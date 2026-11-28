@@ -4,7 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initIncludeSystem();
+  highlightActiveNav(document.body.getAttribute('data-page') || 'home');
   initNavigation();
   initStatsCounter();
   initScrollReveal();
@@ -13,50 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initBackToTop();
 });
-
-/**
- * 1. HTML INCLUDE SYSTEM
- * Loads include/top.html and include/footer.html dynamically when served over HTTP/HTTPS
- * Handles relative path resolution for both root and pages/ subdirectories.
- */
-function initIncludeSystem() {
-  const rootMeta = document.querySelector('meta[name="site-root"]');
-  const rootPrefix = rootMeta ? rootMeta.getAttribute('content') : (window.location.pathname.includes('/pages/') ? '../' : './');
-  const activePage = document.body.getAttribute('data-page') || 'home';
-
-  // Function to load and hydrate an include element
-  async function loadComponent(elementId, filePath) {
-    const el = document.getElementById(elementId);
-    if (!el) return;
-
-    // Check if the current environment supports fetch (HTTP/HTTPS)
-    if (window.location.protocol.startsWith('http')) {
-      try {
-        const response = await fetch(rootPrefix + filePath);
-        if (response.ok) {
-          let html = await response.text();
-          // Replace {{ROOT}} placeholders with appropriate relative prefix
-          html = html.replace(/\{\{ROOT\}\}/g, rootPrefix);
-          el.innerHTML = html;
-        }
-      } catch (err) {
-        // Fallback: If fetch fails (or offline), keep the pre-rendered content intact
-        console.warn('Component include fetch fallback:', err);
-      }
-    }
-
-    // Re-bind navigation events and active classes after rendering
-    highlightActiveNav(activePage);
-    rebindNavEvents();
-  }
-
-  // Attempt async load for dynamic inclusion
-  loadComponent('top-include', 'include/top.html');
-  loadComponent('footer-include', 'include/footer.html');
-
-  // Immediately highlight active nav in case pre-rendered HTML is present
-  highlightActiveNav(activePage);
-}
 
 /**
  * Highlights current page link in navigation

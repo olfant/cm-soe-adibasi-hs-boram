@@ -252,7 +252,7 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   gap: 4px;
 }
@@ -1531,7 +1531,7 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   SHARED FOOTER (include/footer.html)
+   SITE FOOTER
    ========================================================================== */
 .site-footer {
   background-color: var(--dark-forest-green);
@@ -1661,6 +1661,18 @@ textarea.form-control {
   color: #a7cca9;
 }
 
+.footer-credit-link {
+  color: var(--light-green);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-credit-link:hover,
+.footer-credit-link:focus-visible {
+  color: var(--white);
+}
+
 .back-to-top-btn {
   background-color: var(--primary-green);
   color: var(--white);
@@ -1783,6 +1795,7 @@ textarea.form-control {
     top: 100%;
     left: 0;
     right: 0;
+    margin: 0;
     background: var(--dark-forest-green);
     flex-direction: column;
     align-items: stretch;
