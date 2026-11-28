@@ -1319,6 +1319,87 @@ p:last-child { margin-bottom: 0; }
   color: var(--primary-green);
 }
 
+.smc-overview {
+  padding: clamp(40px, 6vw, 64px) 0;
+  background: var(--light-bg);
+}
+
+.smc-overview-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.smc-overview-heading h2 {
+  margin: 0;
+  color: var(--dark-forest-green);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+.smc-priority-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.smc-priority-card {
+  height: 100%;
+  padding: 26px;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.smc-priority-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.smc-priority-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  place-items: center;
+  color: var(--primary-green);
+  background: var(--soft-green);
+  border-radius: var(--radius-sm);
+  font-size: 1.15rem;
+}
+
+.smc-priority-card h3 {
+  margin: 0 0 10px;
+  color: var(--dark-forest-green);
+  font-size: 1.15rem;
+}
+
+.smc-priority-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.smc-message-section {
+  background: var(--white);
+}
+
+.smc-page .message-heading {
+  align-items: flex-start;
+}
+
+.smc-page .message-heading > div {
+  flex: 1;
+}
+
+.smc-page .message-heading .section-tag {
+  margin-bottom: 8px;
+}
+
+.smc-page .message-heading h2 {
+  padding: 0;
+  border: 0;
+}
+
 .message-letter {
   max-width: 980px;
   margin: 0 auto 32px;
@@ -2128,6 +2209,29 @@ textarea.form-control {
   }
   .infrastructure-grid {
     grid-template-columns: 1fr;
+  }
+  .smc-priority-grid {
+    grid-template-columns: 1fr;
+  }
+  .smc-priority-card {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    column-gap: 16px;
+    align-items: center;
+    padding: 20px;
+  }
+  .smc-priority-icon {
+    grid-row: span 2;
+    margin: 0;
+  }
+  .smc-priority-card h3 {
+    margin-bottom: 4px;
+  }
+  .smc-page .message-heading {
+    gap: 12px;
+  }
+  .smc-page .message-heading h2 {
+    font-size: 1.45rem;
   }
   .message-letter {
     padding: 24px;
