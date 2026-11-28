@@ -1549,18 +1549,30 @@ p:last-child { margin-bottom: 0; }
 }
 
 .infrastructure-card {
-  padding: 28px;
   background: var(--white);
   border: 1px solid var(--border-light);
   border-top: 3px solid var(--primary-green);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  overflow: hidden;
 }
 
 .infrastructure-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+}
+
+.infrastructure-card-image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.infrastructure-card-body {
+  padding: 28px;
 }
 
 .infrastructure-icon {
@@ -1742,6 +1754,80 @@ p:last-child { margin-bottom: 0; }
 .gallery-caption span {
   font-size: 0.8rem;
   color: var(--muted-text);
+}
+
+.events-gallery-section {
+  background: var(--light-bg);
+}
+
+.events-gallery-heading {
+  max-width: 720px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.events-gallery-heading h2 {
+  margin: 0 0 10px;
+  color: var(--dark-forest-green);
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.events-gallery-heading p {
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.event-gallery-item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  transition: var(--transition);
+}
+
+.event-gallery-item:focus-visible {
+  outline: 3px solid var(--primary-green);
+  outline-offset: 4px;
+}
+
+.event-poster-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  padding: 8px;
+  background: var(--light-bg);
+}
+
+.event-poster-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.event-gallery-item:hover .event-poster-frame img {
+  transform: scale(1.025);
+}
+
+.event-gallery-item .gallery-caption {
+  flex: 1;
+}
+
+.event-gallery-item .gallery-card-title {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--dark-forest-green);
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.event-gallery-item .gallery-card-sub {
+  display: block;
 }
 
 /* Lightbox Modal */
@@ -2445,7 +2531,7 @@ textarea.form-control {
   }
 
   .brand-school-name {
-    font-size: clamp(1.9rem, 2.2vw, 2.5rem);
+    font-size: clamp(3rem, 2.2vw, 2.5rem);
     margin-bottom: 8px;
   }
 
